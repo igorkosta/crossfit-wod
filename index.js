@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const $ = require('cheerio');
 const request = require('request');
 const uri = 'https://crossfit.com/workout/'
@@ -11,7 +13,7 @@ request(uri, function (error, response, html) {
 
   var parsedHTML = $.load(html)
   var wods = []
-  
+
   parsedHTML('#archives div.content').each(function(i, element) {
     var wod = {}
     var a = $(this).find('h3 a').first();
@@ -20,9 +22,9 @@ request(uri, function (error, response, html) {
     var excercises = $(this).find('div.row p').first().text()
     wod.excercises = excercises
     wods.push(wod);
-  })
+  });
 
-var one = getRandomInt(1, wods.length);
-console.log(wods[one]);
+  var one = getRandomInt(1, wods.length);
+  console.log(wods[one]);
 
 });

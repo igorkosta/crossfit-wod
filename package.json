@@ -1,8 +1,11 @@
 {
-  "name": "wod",
-  "version": "1.0.0",
+  "name": "crossfit-wod",
+  "version": "1.0.2",
   "description": "wod of the day from https://crossfit.com/workout/",
   "main": "index.js",
+  "bin" : {
+    "crossfit-wod" : "./index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
