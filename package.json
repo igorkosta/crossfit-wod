@@ -1,7 +1,7 @@
 {
   "name": "crossfit-wod",
-  "version": "0.0.2",
-  "description": "Wod of the day from https://crossfit.com/workout/. Install globally with -g option. Run with `crossfit-wod`",
+  "version": "0.0.3",
+  "description": "crossfit-wod will log a random workout of the day from https://crossfit.com/workout/ to your console",
   "main": "index.js",
   "bin" : {
     "crossfit-wod" : "./index.js"
