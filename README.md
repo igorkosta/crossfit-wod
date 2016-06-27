@@ -1,8 +1,17 @@
 # Crossfit WOD
-`node .` will `console.log` a random workout of the day from https://crossfit.com/workout/
+`crossfit-wod` will `console.log` a random workout of the day from https://crossfit.com/workout/
 
-Install globally with `npm install -g crossfit-wod`
+## Installation
 
+```
+npm install -g crossfit-wod
+```
+
+## Usage
+
+```
+crossfit-wod
+```
 
 ## TODOs
 Due to the usage of infinite scrolling on the officials crossfit page, we only operate on a very limited number of excercises that are initially loaded.
