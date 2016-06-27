@@ -1,6 +1,6 @@
 {
   "name": "crossfit-wod",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "crossfit-wod will log a random workout of the day from https://crossfit.com/workout/ to your console",
   "main": "index.js",
   "bin" : {
@@ -8,6 +8,14 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "homepage": "https://github.com/igorkosta/crossfit-wod",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/igorkosta/crossfit-wod"
+  },
+  "bugs": {
+    "url": "https://github.com/igorkosta/crossfit-wod/issues"
   },
   "keywords": [
    "crossfit",
