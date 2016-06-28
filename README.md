@@ -14,9 +14,11 @@ crossfit-wod
 ```
 
 ## TODOs
-Due to the usage of infinite scrolling on the officials crossfit page, we only operate on a very limited number of excercises that are initially loaded.
-Consider either implement the auto-load of the further results or find out the date of the first excercise and randomize the dates from the initial date until today (which might cause a lot of requests).
-Add tests.
+- I randomize the date and requests the page of this date to crawl the workout. Most of the times the contents of the workout are inside of the first `<p></p>` block but not always. It might be the case that the first `<p></p>` holds some kind of page title with a link then the contents of this title will be shown as `excercises` which is not good :). I have to think how to solve this problem without creating a lot of mess.
+- Implement search
+- Tests
+- Parse and response with media links
+
 
 ## License
 
