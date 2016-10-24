@@ -1,6 +1,6 @@
 {
   "name": "crossfit-wod",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "crossfit-wod will log a random workout of the day from https://crossfit.com/workout/ to your console",
   "main": "lib/index.js",
   "bin": {
