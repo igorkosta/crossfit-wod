@@ -2,12 +2,13 @@
   "name": "crossfit-wod",
   "version": "0.0.5",
   "description": "crossfit-wod will log a random workout of the day from https://crossfit.com/workout/ to your console",
-  "main": "index.js",
+  "main": "lib/index.js",
   "bin": {
-    "crossfit-wod": "./index.js"
+    "crossfit-wod": "./lib/index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/lab -a code -t 100 -L -r console -o stdout -r lcov -o coverage/lcov.info",
+    "test-html": "mkdir -p coverage && ./node_modules/.bin/lab -a code -t 100 -L -r html > coverage/index.html"
   },
   "homepage": "https://github.com/igorkosta/crossfit-wod",
   "repository": {
@@ -35,5 +36,11 @@
     "request": "^2.72.0"
   },
   "author": "igorkosta",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "code": "^4.0.0",
+    "lab": "^11.1.0",
+    "request": "^2.75.0",
+    "sinon": "^1.17.6"
+  }
 }
