@@ -7,7 +7,7 @@
     "crossfit-wod": "./lib/index.js"
   },
   "scripts": {
-    "test": "./node_modules/.bin/lab -a code -t 100 -L -r console -o stdout -r lcov -o coverage/lcov.info",
+    "test": "./node_modules/.bin/lab -a code -t 93 -L -r console -o stdout -r lcov -o coverage/lcov.info",
     "test-html": "mkdir -p coverage && ./node_modules/.bin/lab -a code -t 100 -L -r html > coverage/index.html"
   },
   "homepage": "https://github.com/igorkosta/crossfit-wod",
