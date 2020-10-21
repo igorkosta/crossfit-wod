@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+  <head>
+    <title>This is the title of the webpage!</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #292C34;
+        color: #CBCBCB;
+      }
+      a {
+        color: red;
+      }
+
+      .button {
+        border: none;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+      }
+
+      .button1 {
+        background-color: white;
+        color: black;
+        border: 2px solid #4CAF50;
+      }
+
+      .button1:hover {
+        background-color: #4CAF50;
+        color: white;
+      }
+
+      .button2 {
+        background-color: white;
+        color: black;
+        border: 2px solid #008CBA;
+      }
+
+      .button2:hover {
+        background-color: #008CBA;
+        color: white;
+      }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script
+      type="text/javascript"
+    >
+      function randomWod() {
+        const proxyUrl = 'https://cors-anywhere.herokuapp.com/'
+        const uri = 'https://crossfit.com'
+        const startDate = new Date('2001-02-10')
+        const today = new Date()
+
+        const randomDate = () => {
+          return new Date(+startDate + Math.random() * (today - startDate))
+        }
+        const formattedDate = (date = randomDate()) => {
+          return date.toLocaleDateString('en-ZA')
+        }
+        const randomWodUri = (baseUri = uri) => {
+          return baseUri + '/workout/' + formattedDate()
+        }
+        const updateWodContents = async () => {
+          try {
+            // show spinner
+            const response = await fetch(proxyUrl + randomWodUri())
+            let html = await response.text()
+            var $html = $($.parseHTML(html));
+            const wodContainer = $html.find('#wodContainer').children('.wod')
+            if (!wodContainer.length) {
+              updateWodContents()
+            }
+            const innerHTML = wodContainer.children('div.white-box').find('.content').html()
+            document.getElementById('wod').innerHTML = innerHTML
+          } catch (error) {
+            alert(error)
+          } finally {
+            // remove spinner
+          }
+        }
+        return updateWodContents()
+      }
+      window.onload=randomWod
+    </script>
+  </head>
+  <body onLoad="randomWod()">
+    <div id="wod">
+    </div>
+    <button
+      class="button"
+      onclick="randomWod()">
+      Another WOD!
+    </button>
+  </body>
+</html>

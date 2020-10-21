@@ -81,18 +81,4 @@ describe('Unsuccessful request', () => {
     done()
   })
 
-  // it('hits a 404', (done) => {
-  //     // should cover the case where first request hits a 404
-  //     const notFound = Fixtures.notFound;
-  //     Sinon
-  //         .stub(Request, 'get')
-  //         .yields(null, { statusCode: 404 }, notFound);
-  //
-  //     Wod.randomWod( (result) => {
-  //
-  //         expect(result).to.equal(expected);
-  //     });
-  //     done();
-  // });
-
 })
