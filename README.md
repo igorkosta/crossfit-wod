@@ -1,6 +1,13 @@
 # Crossfit WOD [ ![Codeship Status for igorkosta/crossfit-wod](https://codeship.com/projects/e4c649c0-7bf8-0134-665c-26a347271668/status?branch=master)](https://codeship.com/projects/180908)
 crossfit-wod will log a random workout of the day from https://crossfit.com/workout/ to your console
 
+<p align="center">
+  <img
+    src="./crossfit.png"
+    width="150"
+  />
+</p>
+
 ## Installation
 
 ```
